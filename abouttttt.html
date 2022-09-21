@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        if (window.parent) {
+            var _w = 0, _h = 0;
+            var updateFormSize = function () {
+                var form = $('form.shaped-form-extended,form.shaped-form');
+                var w = form.outerWidth(true);
+                var h = form.outerHeight(true);
+                if (Math.abs(_w - w) > 5 || Math.abs(_h - h) > 5) {
+                    _w = w;
+                    _h = h;
+                    var msg = { key: 'login-frame-size', width: w, height: h };
+                    window.parent.postMessage(msg, "*");
+                }
+                setTimeout(updateFormSize, 300);
+            }
+            updateFormSize();
+        }
+    </script>
+</head>
+
+<body>
+    
+
+
+    <section class="u-align-center u-clearfix u-section-2" id="carousel_2a03">
+        <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+          <h2 class="u-text u-text-1">It's all about<br>
+          </h2>
+          <div class="u-black u-container-style u-group u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+              <h3 class="u-text u-text-default u-text-2">the people.</h3>
+            </div>
+          </div>
+          <p class="u-text u-text-3">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+          <div class="u-list u-repeater u-list-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <img src="//images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/609aa2463d755c63a10c8eff/pexels-photo-3656518.jpeg" alt="" class="u-image u-image-default u-image-1">
+                <h5 class="u-text u-text-default u-text-4">Adam Jonson</h5>
+                <h6 class="u-text u-text-default u-text-5">Developer</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <img src="//images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/dd42b3a3f34451fa9a162026/pexels-photo-3979473.jpeg" alt="" class="u-image u-image-default u-image-2">
+                <h5 class="u-text u-text-default u-text-6">Linda Larson</h5>
+                <h6 class="u-text u-text-default u-text-7">Manager</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                <img src="//images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/fb1bd589ef31510aa482daf9/pexels-photo-3882348.jpeg" alt="" class="u-image u-image-default u-image-3">
+                <h5 class="u-text u-text-default u-text-8">Jonny Hudson</h5>
+                <h6 class="u-text u-text-default u-text-9">Designer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+
+</html>
